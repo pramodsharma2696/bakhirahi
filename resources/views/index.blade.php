@@ -94,8 +94,9 @@
                                     <li>PHP - MySQl</li>
                                     <li>Javascript - Jquery - Ajax</li>
                                     <li>NodeJs - NextJs - Vuejs</li>
-                                    <li>Laravel - Codeignitor - APIs</li>
-                                    <li>Wordpress</li>
+                                    <li>Python - MongoDB - APIs</li>
+                                    <li>Laravel - Codeignitor - Wordpress</li>
+                                    <li>Git - Bitbucket - Gitlab</li>
                                     <li>HTML - CSS - Bootstrap</li>
 
                                 </ul>
