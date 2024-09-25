@@ -449,7 +449,7 @@
             <div class="col-lg-6 text-center">
                 <h6><span class="text-theme">Contact</span></h6>
                 <h3>Get in touch</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
             </div>
         </div>
         <div class="row justify-content-center">
@@ -502,7 +502,8 @@
             <div class="col-md-4">
                 <div class="contact-name">
                     <div class="icon">
-                        <i class="fas fa-phone-alt"></i>
+                       
+                        <i class="fas fa-envelope"></i>
                     </div>
                     <h5>Mail</h5>
                     <p>pramodsharma2696@gmail.com<br>Mon to Fri (10 am – 8 pm)</p>
@@ -511,7 +512,7 @@
             <div class="col-md-4">
                 <div class="contact-name">
                     <div class="icon">
-                        <i class="fas fa-envelope"></i>
+                    <i class="fas fa-phone-alt"></i>
                     </div>
                     <h5>Phone</h5>
                     <p>Phone: +91 8104555452</p>
