@@ -87,34 +87,80 @@
                         </div>
                     </div>
                     <div class="about-row">
-                        <div class="row g-4">
-                            <div class="col-6">
-                                <h3>Competences</h3>
-                                <ul>
-                                    <li>PHP - MySQl</li>
-                                    <li>Javascript - Jquery - Ajax</li>
-                                    <li>NodeJs - NextJs - Vuejs</li>
-                                    <li>Python - MongoDB - APIs</li>
-                                    <li>Laravel - Codeignitor - Wordpress</li>
-                                    <li>Git - Bitbucket - Gitlab</li>
-                                    <li>HTML - CSS - Bootstrap</li>
-
-                                </ul>
-                            </div>
-                            <div class="col-6">
-                                <h3>Tools</h3>
-                                <ul>
-                                    <li>Figma</li>
-                                    <li>Adobe Photoshop</li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+    <div class="row g-4">
+        <!-- Competences Section -->
+        <div class="col-12">
+            <h3>Competences</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <ul style="list-style-type: none; padding: 0;">
+                        <li style="border-bottom: 2px solid white; padding-bottom: 5px;"><strong>→ Backend:</strong>
+                            <ul>
+                                <li>PHP (9/10)</li>
+                                <li>Python (5/10)</li>
+                                <li>Node.js (7/10)</li>
+                            </ul>
+                        </li>
+                        <li style="border-bottom: 2px solid white; padding-bottom: 5px;"><strong>→ Frontend:</strong>
+                            <ul>
+                                <li>JavaScript (6/10)</li>
+                                <li>HTML (9/10)</li>
+                                <li>CSS (4/10)</li>
+                            </ul>
+                        </li>
+                        <li style="border-bottom: 2px solid white; padding-bottom: 5px;"><strong>→ Databases:</strong>
+                            <ul>
+                                <li>MySQL (9/10)</li>
+                                <li>MongoDB (6/10)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul style="list-style-type: none; padding: 0;">
+                        <li style="border-bottom: 2px solid white; padding-bottom: 5px;"><strong>→ Frameworks & Libraries:</strong>
+                            <ul>
+                                <li>Laravel (9/10)</li>
+                                <li>CodeIgniter3 (9/10)</li>
+                                <li>Vue.js (6/10)</li>
+                                <li>Next.js (7/10)</li>
+                                <li>Express.js (7/10)</li>
+                                <li>jQuery (6/10)</li>
+                                <li>Bootstrap (8/10)</li>
+                            </ul>
+                        </li>
+                        <li style="border-bottom: 2px solid white; padding-bottom: 5px;"><strong>→ Version Control & CI/CD:</strong>
+                            <ul>
+                                <li>Git (5/10)</li>
+                                <li>Bitbucket (5/10)</li>
+                            </ul>
+                        </li>
+                        <li style="border-bottom: 2px solid white; padding-bottom: 5px;"><strong>→ APIs & Protocols:</strong>
+                            <ul>
+                                <li>RESTful APIs (9/10)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul style="list-style-type: none; padding: 0;">
+                        <li style="border-bottom: 2px solid white; padding-bottom: 5px;"><strong>→ Tools:</strong>
+                            <ul>
+                                <li>Figma (4/10)</li>
+                                <li>AWS (5/10)</li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+
+                </div>
+            </div>
+        </div>
 </section>
 <!-- End About Section -->
 <!-- Services Section -->
@@ -502,7 +548,7 @@
             <div class="col-md-4">
                 <div class="contact-name">
                     <div class="icon">
-                       
+
                         <i class="fas fa-envelope"></i>
                     </div>
                     <h5>Mail</h5>
@@ -512,7 +558,7 @@
             <div class="col-md-4">
                 <div class="contact-name">
                     <div class="icon">
-                    <i class="fas fa-phone-alt"></i>
+                        <i class="fas fa-phone-alt"></i>
                     </div>
                     <h5>Phone</h5>
                     <p>Phone: +91 8104555452</p>
