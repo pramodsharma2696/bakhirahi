@@ -27,7 +27,7 @@ class sendMail extends Mailable
     {
         return $this->from('pramodsharma@bakhirahi.com', 'Bakhirahi Portfolio')
                     ->subject('New Message from ' . $this->data['name'])
-                    ->markdown('emails.sendMail')
+                    ->markdown('emails.senMail')
                     ->with('data', $this->data);
     }
 }

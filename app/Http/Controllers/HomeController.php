@@ -38,7 +38,7 @@ class HomeController extends Controller
             return response()->json(['success' => true, 'message' => 'Your message has been sent successfully!']);
         } catch (\Exception $e) {
             // Handle any exceptions that may occur
-            dd($e->getMessage());
+            //dd($e->getMessage());
             return response()->json(['success' => false, 'message' => 'Failed to send email. Please try again later.'], 500);
         }
     }
