@@ -550,7 +550,7 @@
                         <i class="fas fa-envelope"></i>
                     </div>
                     <h5>Mail</h5>
-                    <p>pramodsharma2696@gmail.com<br>Mon to Fri (10 am – 8 pm)</p>
+                    <p>pramodsharma2696@gmail.com<br>Monday to Sunday (10 am – 8 pm)</p>
                 </div>
             </div>
             <div class="col-md-4">
