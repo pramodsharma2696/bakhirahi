@@ -1,73 +1,58 @@
-function send_mail() {
-    var name = jQuery("#name").val();
-    var email = jQuery("#email").val();
-    var subject = jQuery("#subject").val();
-    var message = jQuery("#message").val();
-    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    var flag = 0;
-    if (name == "") {
-        jQuery("#name").addClass('invalid');
-        jQuery("#val_user_name").html("Your Name is Required");
-        flag = 1;
-    } else {
-        jQuery("#name").removeClass('invalid');
-        jQuery("#val_user_name").html("");
-    }
+$("form[name='get_in_touch']").validate({
+    rules: {
+      name: {
+        required: true
+      },
+      email: {
+        required: true,
+        email: true
+      },
+      message: {
+        required: true
+      }
+    },
+    errorElement: 'span',
+    errorPlacement: function(error, element) {
+      error.addClass('invalid-feedback');
+      element.closest('.form-group').append(error);
+    },
+    highlight: function(element, errorClass, validClass) {
+      $(element).addClass('is-invalid');
+    },
+    unhighlight: function(element, errorClass, validClass) {
+      $(element).removeClass('is-invalid');
+    },
+    submitHandler: function(form) {
+      var URL = $("form[name='get_in_touch']").attr('action');
+      var formData = $(form).serialize();
 
-    if (email == "") {
-        jQuery("#email").addClass('invalid');
-        jQuery("#val_user_email").html("Please Enter Email");
-        flag = 1;
-    } else if (!email.match(mailformat)) {
-        jQuery("#email").addClass('invalid');
-        jQuery("#val_user_email").html("Please Enter Valid Email");
-        flag = 1;
-    } else {
-        jQuery("#email").removeClass('invalid');
-        jQuery("#val_user_email").html("");
-    }
-
-    if (subject == "") {
-        jQuery("#subject").addClass('invalid');
-        jQuery("#val_subject").html("Subject is Required");
-        flag = 1;
-    } else {
-        jQuery("#subject").removeClass('invalid');
-        jQuery("#val_subject").html("");
-    }
-    if (message == "") {
-        jQuery("#message").addClass('invalid');
-        jQuery("#val_message").html("Please Describe your thoughts");
-        flag = 1;
-    } else {
-        jQuery("#message").removeClass('invalid');
-        jQuery("#val_message").html("");
-    }
-
-    if (flag == 1) {
-        return false;
-    }
-
-    var data = {
-        "name": name,
-        "email": email,
-        "subject": subject,
-        "message": message,
-    };
-
-    jQuery.ajax({
-        type: "POST",
-        crossOrigin: true,
-        url: "process_form.php",
-        data: data,
-        success: function(response) {
-            if (response == '1') {
-                jQuery('#suce_message').show();
-                jQuery("#contact-form")[0].reset();
-            } else {
-                jQuery('#err_message').show();
-            }
+      $.ajaxSetup({
+        headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
-    });
+      });
 
-}
+      $.ajax({
+        type: "POST",
+        url: URL,
+        data: formData,
+        beforeSend: function() {
+          $("#get_in_btn").attr("disabled", true).text("Sending...");
+        },
+        success: function(result) {
+          if (result.success) {
+            $("#get_in_touch")[0].reset();
+            toastr.success(result.message);
+          } else {
+            toastr.error(result.message);
+          }
+        },
+        complete: function() {
+          $("#get_in_btn").attr("disabled", false).text("Send Message");
+        },
+        error: function(xhr) {
+          toastr.error('An error occurred: ' + xhr.responseText);
+        }
+      });
+    }
+});

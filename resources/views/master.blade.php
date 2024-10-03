@@ -17,6 +17,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <!-- theme css -->
     <link href="{{ asset('') }}assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
     <style>
     .projects {
     color: #fff;
@@ -71,6 +73,13 @@
         <div class="right-effects"></div>
         <div class="left-effects"></div>
         <!-- End Effect -->
+        <div id="testdiv">
+    <a href="https://api.whatsapp.com/send?phone=918104555452" target="_blank">
+        <div class="whatsapp_chat1">
+            <i class="fab fa-whatsapp"></i>
+        </div>
+    </a>
+</div>
     </main>
     <!-- Main -->
     <!-- Footer -->
@@ -98,6 +107,8 @@
     <script src="{{ asset('') }}assets/vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="{{ asset('') }}assets/vendor/one-page/scrollIt.min.js"></script>
     <script src="{{ asset('') }}assets/js/custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
     <script src="{{ asset('') }}assets/js/mail_send.js"></script>
     <!-- end -->
 </body>

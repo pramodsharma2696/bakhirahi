@@ -500,39 +500,37 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-8">
-                <div class="contact-form">
-                    <form id="contact-form" method="POST">
-                        <div class="row gy-4">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input name="Name" id="name" placeholder="Name *" class="form-control" type="text">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input name="Email" id="email" placeholder="Email *" class="form-control" type="email">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <input name="Subject" id="subject" placeholder="Subject *" class="form-control" type="text">
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <textarea name="message" id="message" placeholder="Your message *" rows="5" class="form-control"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="send">
-                                    <button class="link-effect" type="button" value="Send" onclick="send_mail()"> send message <i class="bi bi-arrow-up-right"></i></button>
-                                    <span id="suce_message" class="text-success" style="display: none">Message Sent Successfully</span>
-                                    <span id="err_message" class="text-danger" style="display: none">Message Sending Failed</span>
-                                </div>
+            <div class="contact-form">
+                <form action="{{ route('send')}}" name="get_in_touch" id="get_in_touch" method="POST" novalidate="novalidate">
+                    @csrf
+                    <div class="row gy-4">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input name="name" id="name" placeholder="Name *" class="form-control" type="text" required>
+                                
                             </div>
                         </div>
-                    </form>
-                </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input name="email" id="email" placeholder="Email *" class="form-control" type="email" required>
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <textarea name="message" id="message" placeholder="Your message *" rows="5" class="form-control" required></textarea>
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="send">
+                                <button class="link-effect" type="submit" id="get_in_btn">Send Message <i class="bi bi-arrow-up-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
             </div>
         </div>
         <div class="row gy-4 text-center justify-content-center contact-info">
